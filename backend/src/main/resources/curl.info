@@ -1,0 +1,8 @@
+# create loan
+curl -X POST -H "Content-Type: application/json" 'http://localhost:8080/api/loan/create?amount=25000&interestRate=3.0&maturityInMonth=48'
+curl -X POST -H "Content-Type: application/json" 'http://localhost:8080/api/loan/create?amount=30000&interestRate=6.0&maturityInMonth=36'
+
+# get loans
+curl -X POST -H "Content-Type: application/json" http://localhost:8080/api/loan/get
+
+

@@ -18,7 +18,7 @@ public class LoanCalculationControllerImpl implements LoanCalculationController 
 	private LoanService loanService;
 
 	@Override
-	@PostMapping("/loans/create")
+	@PostMapping("/loan/create")
 	public ResponseEntity<LoanDto> create(@RequestParam BigDecimal amount,
 	                                      @RequestParam BigDecimal interestRate,
 	                                      @RequestParam Integer maturityInMonth) {
@@ -27,14 +27,14 @@ public class LoanCalculationControllerImpl implements LoanCalculationController 
 	}
 
 	@Override
-	@GetMapping("/loans/get")
+	@GetMapping("/loan/get")
 	public ResponseEntity<List<LoanDto>> getAllLoans() {
 		List<LoanDto> allLoans = loanService.getAllLoans();
 		return ResponseEntity.ok(allLoans);
 	}
 
 	@Override
-	@GetMapping("/loans/calculate/{id}")
+	@GetMapping("/loan/calculate/{id}")
 	public ResponseEntity<LoanDto> calculate(UUID id) {
 		LoanDto loanDto = loanService.calculate(id);
 		return ResponseEntity.ok(loanDto);

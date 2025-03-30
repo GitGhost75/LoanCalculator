@@ -1,8 +1,0 @@
-# create loan
-curl -X POST -H "Content-Type: application/json" -d '{"amount":"2.5", "interestRate":"6.0", "maturityInMonth":"48"}' http://localhost:8080/api/loans/create
-curl -X POST -H "Content-Type: application/json" -d '{"amount":"4.5", "interestRate":"7.5", "maturityInMonth":"36"}' http://localhost:8080/api/loans/create
-
-# get loans
-curl -X POST -H "Content-Type: application/json" http://localhost:8080/api/loans/get
-
-

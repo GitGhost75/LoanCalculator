@@ -1,0 +1,26 @@
+app:
+  name: loan-calculator-local
+  version: '@project.version@'
+  # app custom property, if true, insert data for testing
+  db:
+    init:
+      enabled: true
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/loandb
+    username: loan
+    password: loan
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
+# logging
+logging:
+  level:
+    web: DEBUG
+    org.kiemle: DEBUG
+
+# client
+ui:
+  url: http://localhost:3000
